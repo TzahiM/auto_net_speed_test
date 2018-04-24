@@ -49,6 +49,9 @@ def run_test():
     if n_args is 1:
         speed_test()
         return
+    if sys.argv[1] == '?':
+        print 'usage: python', sys.argv[0] ,'<number_of_iterations(default is 1)> <interval_minutes(default is 0)>' 
+        return
     if n_args is 2:
         speed_test( number_of_iterations = int(sys.argv[1]))
         return
